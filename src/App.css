@@ -1,42 +1,96 @@
-#root {
-  max-width: 1280px;
+/* Your styles here */
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #fff;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+:root {
+  background-color: #fff;
+  color: black;
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0px 5px 2px rgb(184, 184, 184)); /*x, y and blur*/
+  font-size: 76px;
+  font-weight: 500;
+  margin: 0;
+  margin-top: 100px;
+
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  object-fit: cover;
+}
+
+.card-listing {
+  width: 75%;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 1200px;
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+select {
+  background-color: rgb(220, 220, 220);
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  border-radius: 8px;
+  font-size: 20px;
+  padding: 6px;
+  margin-left: 15px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-grid {
+  margin-top: 30px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Always two columns */
+  gap: 30px;
+  margin-left: auto; /* Center the grid horizontally within parent container */
+  margin-right: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Responsive behavior: Switch to one column on small screens */
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* Single column for small screens */
   }
 }
 
-.card {
-  padding: 2em;
+.card img {
+  width: 100%;
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 20px; /* Rounded corners */
 }
 
-.read-the-docs {
-  color: #888;
+
+.sort-feature {
+  display: flex;  
+  justify-content: flex-end; /* Right-align */
+  align-items: center; /* Center vertically */
+  margin-bottom: 25px;
 }
